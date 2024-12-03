@@ -1,4 +1,4 @@
-import java.util.Scanner;2
+import java.util.Scanner;
 public class Percobaan2 {
     public static void main(String[] args) {
         Scanner input6 = new Scanner(System.in);
