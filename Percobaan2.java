@@ -7,7 +7,8 @@ public class Percobaan2 {
         bilangan = input6.nextInt();
         System.out.print("Pangkat: ");
         pangkat = input6.nextInt();
-        System.out.println(hitungPangkat(bilangan, pangkat));
+        System.out.print(cetakDeret(bilangan, pangkat,""));
+        System.out.print(" = " + hitungPangkat(bilangan, pangkat));
     }
     static int hitungPangkat(int x, int y) {
         if (y == 0) {
@@ -15,6 +16,17 @@ public class Percobaan2 {
         }
         else {
             return (x * hitungPangkat(x, y-1));
+        }
+    }
+    static String cetakDeret (int x, int y, String deret) {
+        if (y == 0) {
+            return deret + " x 1";
+        }
+        else {
+            if (deret.length() > 0) {
+                deret += " x ";
+            }
+            return cetakDeret(x, y - 1, deret + x);
         }
     }
 }
